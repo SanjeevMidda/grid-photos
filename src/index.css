@@ -1,0 +1,121 @@
+* {
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  transition: all 1s;
+}
+
+.App {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer {
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  height: 95%;
+  width: 95%;
+  display: grid;
+}
+
+#title {
+  position: relative;
+  z-index: 100;
+}
+
+.mainContainer h3:nth-child(1) {
+  width: fit-content;
+  height: fit-content;
+  font-size: 100px;
+}
+
+.mainContainer h3:nth-child(3) {
+  text-align: right;
+  font-size: 30px;
+}
+
+.mainContainer h3:nth-child(6) {
+  text-align: left;
+  color: blue;
+  font-size: 100px;
+}
+
+.mainContainer h3:nth-child(7) {
+  align-self: self-end;
+  font-size: 30px;
+}
+
+.mainContainer h3:nth-child(9) {
+  align-self: self-end;
+  text-align: right;
+  font-size: 100px;
+}
+
+/* .mainContainer :nth-child(9) {
+  align-self: self-end;
+  justify-self: end;
+} */
+
+.mainContainer.title h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+img {
+  border-radius: 20px;
+}
+
+.mainContainer h3:nth-child(5) {
+  color: blue;
+  align-self: center;
+  justify-self: center;
+}
+
+.photo {
+  place-content: center;
+  display: grid;
+  grid-row: 1;
+  grid-column: 1;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.photoContainer {
+  place-content: center;
+  display: grid;
+  place-items: center;
+}
+
+/* @keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+img,
+h5 {
+  animation: opacity 1s;
+} */
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#logo {
+  animation: rotate 8s linear infinite;
+}
+
+#logo:hover {
+  transform: translateY(-20px);
+}
